@@ -27,5 +27,6 @@ div{
 
 button{
   margin: 2.5px;
+  margin-top: 20px;
 }
 </style>

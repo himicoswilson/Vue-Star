@@ -31,4 +31,9 @@
 div{
   width: 70%;
 }
+@media screen and (max-width: 768px) {
+  div{
+    width: 100%;
+  }
+}
 </style>

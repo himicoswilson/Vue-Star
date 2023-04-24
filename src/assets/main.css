@@ -6,35 +6,40 @@ body{
   box-shadow: rgb(0 0 0) 0 30px 60px 0, inset #3333334d 0 0 0 5px, inset rgb(255 255 255 / 42%) 0 0 0 6px;
   border-radius: 15px;
 }
-[data-theme="dark"] .site-card-group .site-card .info{
-  box-shadow: rgb(0 0 0) 0 30px 60px 0, inset #3333331a 0 0 0 5px, inset #000000b5 0 0 0 6px;
-}
+
 .site-card-group > a {
   width: calc(100% / 4 - 1rem);
   height: 150px;
   position: relative;
   display: block;
   margin: 0.5rem 0.25rem;
+  top: 37px;
+  left: 160px;
   float: left;
   overflow: hidden;
-  padding: 0;
-  left: 160px;
-  top: 45px;
   border-radius: 16px !important;
   transition: all 0.3s ease 0s, transform cubic-bezier(0.71, 0.15, 0.16, 1.15) 0.6s;
-  box-shadow: none;
   border: 1px solid #ebedf0 !important;
 }
+@media only screen and (max-width: 768px) {
+  .site-card-group > a {
+    width: 150px;
+    left: 30px;
+  }
+}
+
 .site-card-group > a .wrapper {
   position: relative;
 }
 
 .site-card-group > a .cover {
   width: 100%;
-  -webkit-transition: -webkit-transform 0.5s ease-out;
+  /* -webkit-transition: -webkit-transform 0.5s ease-out;
   -moz-transition: -moz-transform 0.5s ease-out;
   -o-transition: -o-transform 0.5s ease-out;
-  -ms-transition: -ms-transform 0.5s ease-out;
+  -ms-transition: -ms-transform 0.5s ease-out; */
+
+  /* 控制后面图片过度动画 */
   transition: transform 0.5s ease-out;
 }
 
@@ -46,45 +51,45 @@ body{
 }
 
 .site-card-group > a .info {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
+  display: -ms-flexbox; */
+  /* display: box; */
   display: flex;
-  -webkit-box-orient: vertical;
+  /* -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   -o-box-orient: vertical;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
+  -ms-flex-direction: column; */
   flex-direction: column;
-  -webkit-box-pack: center;
+  /* -webkit-box-pack: center;
   -moz-box-pack: center;
   -o-box-pack: center;
   -ms-flex-pack: center;
-  -webkit-justify-content: center;
+  -webkit-justify-content: center; */
   justify-content: center;
-  -webkit-box-align: center;
+  /* -webkit-box-align: center;
   -moz-box-align: center;
   -o-box-align: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
+  -webkit-align-items: center; */
   align-items: center;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.3);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  /* -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
   -moz-transition: -moz-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
   -o-transition: -o-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-  -ms-transition: -ms-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  -ms-transition: -ms-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; */
+
+  /* 控制上移动画 */
   transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 }
-[data-theme="dark"] .site-card-group > a .info{
-  background-color: #00000078;
-}
 
+/* 控制头像图片 */
 .site-card-group > a .info img {
   position: relative;
   top: 42px;
@@ -98,12 +103,13 @@ body{
   pointer-events: none;
 }
 
+/* 控制底部span */
 .site-card-group > a .info span {
   padding: 10px 10% 70px 10%;
   font-size: 16px;
   width: 100%;
   text-align: center;
-  -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  /* -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 30%); */
   box-shadow: 0 0 10px rgb(0 0 0 / 30%);
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 8px;
@@ -115,57 +121,27 @@ body{
   line-height: 5.5;
   overflow: hidden;
   position: relative;
-  -o-text-overflow: ellipsis;
+  /* -o-text-overflow: ellipsis; */
   text-overflow: ellipsis;
 }
-[data-theme="dark"] .site-card-group > a .info span {
-  background-color: #000000ad;
-}
-.site-card-group .site-card:hover {
-  border-color: var(--anzhiyu-main) !important;
-  background-color: var(--anzhiyu-main) !important;
-  -webkit-box-shadow: var(--anzhiyu-shadow-theme) !important;
-  box-shadow: var(--anzhiyu-shadow-theme) !important;
-}
+
 .site-card-group > a:hover .wrapper img {
-  -webkit-transform: scale(1.2);
+  /* -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
-  -ms-transform: scale(1.2);
+  -ms-transform: scale(1.2); */
+
+  /* 控制背景前伸 */
   transform: scale(1.2);
 }
 
-.site-card-group > a .cover {
-  width: 100%;
-  -webkit-transition: -webkit-transform 0.5s ease-out;
-  -moz-transition: -moz-transform 0.5s ease-out;
-  -o-transition: -o-transform 0.5s ease-out;
-  -ms-transition: -ms-transform 0.5s ease-out;
-  transition: transform 0.5s ease-out;
-}
-.site-card-group > a .wrapper img {
-  pointer-events: none;
-}
-.site-card-group .site-card .wrapper img {
-  -webkit-transition: -webkit-transform 0.5s ease-out !important;
-  -moz-transition: -moz-transform 0.5s ease-out !important;
-  -o-transition: -o-transform 0.5s ease-out !important;
-  -ms-transition: -ms-transform 0.5s ease-out !important;
-  transition: transform 0.5s ease-out !important;
-}
-.site-card-group > a .wrapper .fadeIn {
-  -webkit-animation: coverIn 0.8s ease-out forwards;
-  -moz-animation: coverIn 0.8s ease-out forwards;
-  -o-animation: coverIn 0.8s ease-out forwards;
-  -ms-animation: coverIn 0.8s ease-out forwards;
-  animation: coverIn 0.8s ease-out forwards;
-}
-
 .site-card-group > a:hover .info {
-  -webkit-transform: translateY(-100%);
+  /* -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -o-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
+  -ms-transform: translateY(-100%); */
+
+  /* 控制组件开合 */
   transform: translateY(-100%);
 }
 .site-card-group > a:hover::before {
@@ -174,7 +150,7 @@ body{
   margin: auto;
   left: 0;
   right: 0;
-  top: 10%;
+  top: 14.2%;
   transform: translateY(-50%);
   border-radius: 10px;
   text-align: center;
@@ -187,7 +163,7 @@ body{
 }
 @media only screen and (max-width: 768px) {
   .site-card-group > a:hover::before {
-    top: 18%;
+    top: 16.5%;
     max-width: 80%;
   }
 }
